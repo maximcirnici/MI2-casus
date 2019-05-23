@@ -17,7 +17,6 @@ correctSound.src = "sound/rightanswer.mp3";
 let msgTyped = document.querySelector(".message span");
 let count = 0;
 let loseWindow = document.querySelector("#LoseVenster");
-let tes
 
 
 
