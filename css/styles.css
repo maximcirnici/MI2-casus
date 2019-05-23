@@ -1,0 +1,182 @@
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  margin: 0.2rem 0.2rem;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 20vw;
+    height: 20vw;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.active {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 20vw;
+    height: 20vw;
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-back {
+  color: white;
+  border-radius: 0.5rem;
+}
+
+/* Style the back side */
+.flip-card-front {
+  background-color: white;
+  transform: rotateY(180deg);
+  border-radius: 0.5rem;
+}
+
+
+
+/* =============================================
+ * GRID
+ =============================================== */
+
+.items {
+display: inline-grid;
+    flex-flow: column-reverse;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+    width: 20vw;
+    margin-bottom: 1rem;
+    margin: 0.1rem
+}
+
+.test{
+  display: inline-grid;
+  flex-flow: column-reverse;
+  grid-template-columns: auto auto auto; /* two columns */
+  grid-template-rows: auto; 
+  grid-column-gap: 20px;
+  grid-row-gap: 30px;
+  width: 150px;
+  margin-bottom: 1rem;
+}
+
+.deck {
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-between;
+    margin: 4em 0 0;
+    width: 86%;
+}
+
+#backImage{
+  width: 20vw;
+  height: 20vw;
+}
+
+
+#image{
+  width: 20vw;
+  height: 20vw;
+}
+
+h1{
+  display: block;
+  font-size: 2rem;
+  font-family: 'Gloria Hallelujah', cursive;
+  text-align: center;
+}
+
+/* good */
+.active2 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+/* good */
+.active2:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* good */
+.active_win {
+  visibility: visible;
+  opacity: 100;
+  background: blueviolet;
+  border-radius: 10px;
+  box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 14em 2rem 0px;
+  width: 78vw;
+  height: 66vh;
+  text-align: center;
+  padding-left: 1.2rem;
+}
+
+#test{
+  width: 100%;
+}
+
+
+/* good
+.wonVenster h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+/* good */
+/* .wonVenster .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+} */
+
+
+/* good */
+#play_again{
+  width: 6rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  background-color: chartreuse;
+}
+
+.backImg{
+  width: 20vw;
+  height: 20vw;
+}
+
+#msgTyped{
+  text-align: center
+}
